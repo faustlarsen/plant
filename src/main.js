@@ -8,7 +8,8 @@ import { plantOneControl } from './statemanager.js';
 $(document).ready(function () {
   $("#create-plant").click(function () {
     $('.plant-header').append($('.plant-container').html())
-    console.log($(".plant-header > h3").length + 1);
+    let plantCount = $(".plant-header > h3").length + 1;
+    console.log(plantCount);
   });
 
   $('#feed').click(function () {
