@@ -17,7 +17,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Plant Project',
+      title: 'Water Plant Project',
       template: './src/index.html',
       inject: 'body'
     })
