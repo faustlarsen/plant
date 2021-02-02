@@ -7,7 +7,7 @@ import { plantOneControl } from './statemanager.js';
 
 $(document).ready(function () {
   $("#create-plant").click(function () {
-    $('.plantContainer').append($('.plantContainer').html())
+    $('.plant-header').append($('.plantContainer').html())
   });
 
   $('#feed').click(function () {
