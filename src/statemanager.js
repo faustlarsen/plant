@@ -7,7 +7,7 @@ export const storeState = () => {
   }
 }
 
-export const stateControl = storeState();
+export const plantOneControl = storeState();
 
 export const changeState = (prop) => {
   return (value) => {

@@ -1,4 +1,4 @@
-import { changeState, stateControl } from './statemanager.js';
+import { changeState } from './statemanager.js';
 
 export const feed = changeState("soil")(1);
 export const blueFood = changeState("soil")(5);

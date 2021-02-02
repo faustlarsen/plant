@@ -3,38 +3,45 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { feed, blueFood, badFood, hydrate, superWater, badWater } from './plant.js';
-import { changeState, stateControl } from './statemanager.js';
+import { plantOneControl } from './statemanager.js';
 
 $(document).ready(function () {
+  $("#create-plant").click(function () {
+    $('.plantContainer').append($('.plantContainer').html())
+  });
+
   $('#feed').click(function () {
-    const newState = stateControl(feed);
-    $('#soil-value').text(`Soil: ${newState.soil}`);
-  });
-  $('#blueFood').click(function () {
-    const newState = stateControl(blueFood);
-    $('#soil-value').text(`Soil: ${newState.soil}`);
-  });
-  $('#badFood').click(function () {
-    const newState = stateControl(badFood);
+    const newState = plantOneControl(feed);
     $('#soil-value').text(`Soil: ${newState.soil}`);
   });
 
+  $('#blueFood').click(function () {
+    const newState = plantOneControl(blueFood);
+    $('#soil-value').text(`Soil: ${newState.soil}`);
+  });
+
+  $('#badFood').click(function () {
+    const newState = plantOneControl(badFood);
+    $('#soil-value').text(`Soil: ${newState.soil}`);
+  });
 
   $('#hydrate').click(function () {
-    const newState = stateControl(hydrate);
+    const newState = plantOneControl(hydrate);
     $('#water-value').text(`Water: ${newState.water}`);
   });
+
   $('#superWater').click(function () {
-    const newState = stateControl(superWater);
+    const newState = plantOneControl(superWater);
     $('#water-value').text(`Water: ${newState.water}`);
   });
+
   $('#badWater').click(function () {
-    const newState = stateControl(badWater);
+    const newState = plantOneControl(badWater);
     $('#water-value').text(`Water: ${newState.water}`);
   });
 
   $('#show-state').click(function () {
-    const currentState = stateControl();
+    const currentState = plantOneControl();
     $('#soil-value').text(`Soil: ${currentState.soil}`);
   });
 });
