@@ -3,13 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
-  <script src="main.js"></script>
+  <script type="text/javascript" src="plant.js"></script>
   <title>Plant Project</title>
 </head>
 
 <body>
-  <h1>Hello world</h1>
+  <div class="container">
+    <div class="grow-buttons">
+      <button class="btn-success" id="feed">Add soil</button>
+      <button class="btn-success" id="blueFood">Add blue food soil</button>
+      <button class="btn-success" id="badFood">Add bad food soil</button>
+
+      <button class="btn-success" id="hydrate">Add water</button>
+      <button class="btn-success" id="superWater">Add super water</button>
+      <button class="btn-success" id="badWater">Add bad water</button>
+
+      <button class="btn-success" id="show-state">Current State</button>
+    </div>
+    <h1>Your Plant's Values</h1>
+    <h3>
+      <div id="soil-value">0</div>
+      <div id="water-value">0</div>
+      <!-- <div id="state-value">0</div> -->
+    </h3>
+  </div>
 
 </body>
 
