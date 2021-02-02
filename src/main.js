@@ -2,16 +2,8 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import { feed, blueFood, badFood, hydrate, superWater, badWater } from './plant.js';
 import { changeState, stateControl } from './statemanager.js';
-
-const feed = changeState("soil")(1);
-const blueFood = changeState("soil")(5);
-const badFood = changeState("soil")(-3);
-
-const hydrate = changeState("water")(1);
-const superWater = changeState("water")(5);
-const badWater = changeState("water")(-3);
-
 
 $(document).ready(function () {
   $('#feed').click(function () {
