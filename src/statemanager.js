@@ -1,3 +1,4 @@
+// Storing State
 export const storeState = () => {
   let currentState = {};
   return (stateChangeFunction = state => state) => {
@@ -8,7 +9,7 @@ export const storeState = () => {
 }
 
 export const plantOneControl = storeState();
-
+// Function Factory for Changing States of Different Objects
 export const changeState = (prop) => {
   return (value) => {
     return (state) => ({
